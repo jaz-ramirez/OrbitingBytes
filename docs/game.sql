@@ -26,7 +26,7 @@ CREATE TABLE `answer` (
   `id_answer` int(11) NOT NULL,
   `id_question` int(11) DEFAULT NULL,
   `answer` text NOT NULL,
-  `isCorrect` tinyint(1) DEFAULT NULL,
+  `isCorrect` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_answer`),
   KEY `id_question` (`id_question`),
   CONSTRAINT `answer_ibfk_1` FOREIGN KEY (`id_question`) REFERENCES `question` (`id_question`)
@@ -43,6 +43,29 @@ LOCK TABLES `answer` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `protocol`
+--
+
+DROP TABLE IF EXISTS `protocol`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `protocol` (
+  `id_protocol` int(11) NOT NULL,
+  `protocol` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_protocol`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `protocol`
+--
+
+LOCK TABLES `protocol` WRITE;
+/*!40000 ALTER TABLE `protocol` DISABLE KEYS */;
+/*!40000 ALTER TABLE `protocol` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `question`
 --
 
@@ -51,9 +74,12 @@ DROP TABLE IF EXISTS `question`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `question` (
   `id_question` int(11) NOT NULL,
-  `kilometer` tinyint(4) NOT NULL,
+  `id_protocol` int(11) DEFAULT NULL,
   `question` text NOT NULL,
-  PRIMARY KEY (`id_question`)
+  `kilometer` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id_question`),
+  KEY `id_protocol` (`id_protocol`),
+  CONSTRAINT `question_ibfk_1` FOREIGN KEY (`id_protocol`) REFERENCES `protocol` (`id_protocol`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -75,4 +101,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-05 13:20:52
+-- Dump completed on 2024-10-05 15:27:45
