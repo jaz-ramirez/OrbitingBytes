@@ -1,12 +1,71 @@
+<!--
+** @Archivo:        index.html
+** @Equipo: 	    CoyoAtlón
+** @Descripción:    Maquetado de la página de inicio del juego
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles/style.css">
-    <title>Document</title>
+    <title>INTERPREPASOWO</title>
+    <link rel="stylesheet" href="./static/styles/index.css" type="text/css">
+    <link rel="icon" href="./statics/img/maraton.png" type="img/png">
+
 </head>
 <body>
+
+    <div id="franja1" class="diseñoFranjas"></div>
+    <div id="franja2" class="diseñoFranjas"></div>
+    <div id="fondoTitulo" class=""><h1 id="titulo">Maratón</h1></div>
+
+    <!-- BOTONES PARA EL MENÚ -->
+    <div id="idBotonJugar" class="claseBotonMenu"><p  class="textoBotonMenu">Jugar</p></div>
+    <div id="idBotonInstrucciones" class="claseBotonMenu"><p  class="textoBotonMenu">Instrucciones</p></div>
+    <section id="idImagen">
+        <div id="foco"></div>
+        <div id="cuello"></div>
+        <div id="linea1"></div>
+        <div id="linea2"></div>
+        <div id="linea3"></div>
+        <div id="ovalo"></div>
+        <div id="ovalo2"></div>
+        <div id="base"></div>
+        <div id="rayo1"></div>
+        <div id="rayo2"></div>
+        <div id="rayo3"></div>
+        <div id="rayo4"></div>
+        <div id="rayo4"></div>
+        <div id="rayo5"></div>
+        <div id="rayo6"></div>
+        <div id="rayo7"></div>
+        <div id="rayo8"></div>
+    </section>
+    <!-- <img id="idCreativeCommons" src="./statics/img/creativecommons.png" alt="Creative Commons"> -->
+    <div id="id_capaOscura"></div>
+    <div id="id_caractJuego">
+        <form action="POST" id="form" target="">           
+            <p id="numJugadores">Selecciona el número de jugadores</p>
+            <div id="players">
+            <label for="1Jugadores" id="label1Jugador" class="classLabelJugador">1</label><input type="radio" id="1Jugadores" name="numJugadores" value="1" checked>
+            <label for="2Jugadores" id="label2Jugador" class="classLabelJugador">2</label><input type="radio" id="2Jugadores" name="numJugadores" value="2">
+            <label for="3Jugadores" id="label3Jugador" class="classLabelJugador">3</label><input type="radio" id="3Jugadores" name="numJugadores" value="3">
+            <label for="4Jugadores" id="label4Jugador" class="classLabelJugador">4</label><input type="radio" id="4Jugadores" name="numJugadores" value="4">            
     
+        </div>
+        <div id="new">
+            <input type="color" id="colorj1" value="#0432DB">
+        </div>
+           
+            <p id="TipoTab">Selecciona el tipo de tablero</p>
+            <label for="tablero21" class="Tableross">21 Casillas</label> <input type="radio" id="tablero21" name="casillas" value="21" checked>
+            <label for="tablero42" class="Tableross">42 Casillas</label> <input type="radio" id="tablero42" name="casillas" value="42">
+            <button type="button" id="boton">Aceptar</button>
+        </form> 
+        <div id="cerrarVentana"><p id="PcerrarVentana">X</p></div>
+    </div>
+    
+    <script src="./dynamics/js/index.js"></script>
 </body>
 </html>

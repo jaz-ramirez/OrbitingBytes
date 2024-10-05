@@ -1,0 +1,414 @@
+/*
+** @Archivo:        index.css
+** @Equipo: 	    CoyoAtlón
+** @Descripción:    Diseño del html llamado "index.html"
+*/
+/*==============================Colores=======================*/
+:root{
+    --pink: #FFBEFF;
+    --green: #70F15B; 
+    --blue: #48C8FF;
+    --orange: #FFBC3A;
+    --fondo: #FEFFD9;
+
+}
+
+/* ================================FUENTES ===========================  */
+/*LA FUENTE PARA EL TITULO SE LLAMA "GALINDO"*/
+@font-face{
+    font-family: Galindo_normal;
+    src: url("../fonts/Galindo/Galindo-Regular.ttf");
+}
+/* ============================== GENERAL ============================== */
+body{
+    background-color: var(--fondo);
+    width: 100%;
+    height: 100%;
+}
+
+h1, p{
+    position: absolute;
+    top: 0%;
+    font-family: Galindo_normal;
+    text-align: center;
+    /* font-family: ; 
+    font-size: 3vw;
+    margin: 0px;*/
+}
+
+/* ============================ CLASES ==============================*/
+.diseñoFranjas{
+    position: absolute;
+    /* background-color: var(--pink); */
+    width: 100%;
+    height: 40px;
+}
+.claseBotonMenu{
+    position: relative;
+    background-color: var(--blue);
+    width: 25%; 
+    height: 14%;
+    left: 15%;
+    border-radius: 35px;
+    text-align: center;    
+    transition: background-color .4s;
+    text-align: center;
+}
+.claseBotonMenu:hover{
+    background-color: var(--pink);
+    cursor: pointer;
+    left: 12%;
+    width: 26%;
+    height: 15%;
+}
+.claseBotonMenu:active{
+    transition: background-color .0s;
+    background-color: var(--pink);
+}
+.textoBotonMenu{
+    position: relative;
+    top: 25%;
+    font-size: 3vw;
+    margin: 0px;
+    text-align: center;
+}
+.classLabelJugador{
+    width: 20px;
+    font-family: Galindo_normal;
+    font-size: 1.5vw;
+}
+
+/* ========================== ID ===================================*/
+
+#titulo{
+    position: absolute;
+    top: 7%;
+    font-size: 50px;
+    margin: 0px;
+    text-align: center;
+    left: 40%;
+}
+#franja1{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: var(--pink);
+}
+#franja2{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-color: var(--green);
+}
+#fondoTitulo{
+    position: absolute;
+    background-color: var(--orange);
+    width: 100%;
+    height: 60px;
+    top: 5%;
+    left: 0;
+    text-align: center;
+}
+
+
+#idBotonJugar{
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+#idBotonInstrucciones{
+    position: absolute;
+    top: 60%;
+    left: 15%;
+}
+
+/*idImagen{
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    top: 25%;
+    left: 45%;
+    border-radius: 10%;
+}
+/* #idCreativeCommons{
+    position: absolute;
+    width: 13%;
+    height: 8%;
+    right: 0%;
+    bottom: 6%;
+} */
+
+/* =====================================DIV FORMULARIO =====================================*/
+#id_capaOscura{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: #141414;
+    opacity: 0.9;
+    visibility: hidden;   
+    font-family: Galindo_normal; 
+}
+#id_caractJuego{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: var(--fondo);
+    top: 25%;
+    left: 25%;
+    border-radius: 10%;
+    border-style:solid;
+    border-width: 15px;
+    border-color: var(--orange);
+    visibility: hidden;
+    text-align: center;
+    font-family: Galindo_normal;
+}
+#numJugadores{
+    position: relative;
+    font-size: 2vw;
+    left: 1%;  
+    top: 8%;
+    text-align: center; 
+    font-family: Galindo_normal; 
+}
+#classLabelJugador{
+    position: absolute;
+    font-size: 2vw;
+    top:9%;
+}
+#TipoTab{
+    position: relative;
+    font-size: 2vw;
+    text-align: center; 
+    top:78%;
+}
+.Tableross{
+    font-size: 1.3vw;
+}
+
+#boton{
+    position: absolute;
+    font-size: 1.2vw;
+    top: 80%;
+    left: 45%;
+    font-family: Galindo_normal; 
+    background-color: var(--green);
+}
+#PcerrarVentana{
+    margin: 10%;
+    font-size: 2.5vw;
+    top: -9%;
+   
+}
+#cerrarVentana{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: red;
+    top: -2%;
+    right: 1%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/*=====================================Animación=====================================*/
+#foco{
+    top:270px;
+    position: absolute;
+    left: 850px;
+    /**/
+    width: 250px;
+    height: 250px;
+  
+    border-radius: 50%;
+    animation: encender 5s linear infinite;
+}
+#cuello{
+    top:490px;
+    position: absolute;
+    left: 910px;
+    width: 140px;
+    height: 50px;
+    animation: encender 5s linear infinite;
+    
+}
+#linea1{
+    position: absolute;
+    top:430px;
+    left: 950px;
+    width: 6px;
+    height: 120px;
+    background-color: BLACK;
+    
+}
+#linea2{
+    position: absolute;
+    top:430px;
+    left: 1000px;
+    width: 6px;
+    height: 120px;
+    background-color: BLACK;
+    
+}
+#ovalo{
+    position: absolute;
+    top:410px;
+    left: 996px;
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 0, 0);
+    transform: rotate(120deg);
+    
+}
+#ovalo2{
+    position: absolute;
+    top:410px;
+    left: 919px;
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 0, 0);
+    transform: rotate(230deg);
+    
+}
+#linea3{
+    position: absolute;
+    top:428px;
+    left: 950px;
+    width: 50px;
+    height: 5px;
+    background-color: BLACK;
+}
+#base{
+    top:535px;
+    position: absolute;
+    left: 910px;
+    width: 138px;
+    height: 50px;
+    background-color: #3a3a3a;
+    border-radius: 10%;
+    border: solid 0.5px black;
+    
+}
+
+#rayo1{
+    top:400px;
+    position: absolute;
+    left: 692px;
+    width: 130px;
+    height: 20px;
+    border-radius: 40%;
+    transform: rotate(5deg);
+    
+    animation: encender 5s linear infinite;
+}
+#rayo2{
+    top:300px;
+    position: absolute;
+    left: 703px;
+    width: 130px;
+    height: 20px;
+    border-radius: 40%;
+    transform: rotate(20deg);
+    
+    animation: encender 5s linear infinite;
+}
+#rayo3{
+    top:215px;
+    position: absolute;
+    left: 760px;
+    width: 130px;
+    height: 20px;
+    border-radius: 40%;
+    transform: rotate(45deg);
+    
+    animation: encender 5s linear infinite;
+}
+#rayo4{
+    top:167px;
+    position: absolute;
+    left: 855px;
+    width: 130px;
+    height: 20px;
+    border-radius: 40%;
+    transform: rotate(80deg);
+    
+    animation: encender 5s linear infinite;
+}
+#rayo5{
+    top:165px;
+    position: absolute;
+    left: 960px;
+    width: 130px;
+    height: 20px;
+    border-radius: 40%;
+    transform: rotate(100deg);
+    
+    animation: encender 5s linear infinite;
+}
+#rayo6{
+    top:210px;
+    position: absolute;
+    left: 1055px;
+    width: 130px;
+    height: 20px;
+    border-radius: 40%;
+    transform: rotate(125deg);
+    
+    animation: encender 5s linear infinite;
+}
+#rayo7{
+    top:300px;
+    position: absolute;
+    left: 1125px;
+    width: 130px;
+    height: 20px;
+    border-radius: 40%;
+    transform: rotate(160deg);
+    
+    animation: encender 5s linear infinite;
+}
+#rayo8{
+    top:400px;
+    position: absolute;
+    left: 1125px;
+    width: 130px;
+    height: 20px;
+    border-radius: 40%;
+    transform: rotate(175deg);
+    
+    animation: encender 5s linear infinite;
+}
+@keyframes encender{
+    0%{
+        background-color:var(--fondo);
+       
+    }
+    1%{
+        background-color: rgb(255, 230, 0);
+
+      }
+    33%{
+        background-color: var(--fondo);
+       
+    }
+    34%{
+      background-color: rgb(255, 230, 0);
+     
+    }
+    66%{
+        background-color: var(--fondo);
+      
+      }
+    67%{
+      background-color: rgb(255, 230, 0);
+     
+    }
+    99%{
+        background-color:var(--fondo);
+        
+      }
+  }
