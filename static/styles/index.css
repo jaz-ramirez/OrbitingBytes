@@ -1,6 +1,6 @@
 /*
 ** @Archivo:        index.css
-** @Equipo: 	    CoyoAtlón
+** @Equipo: 	    Orbiting Bytes
 ** @Descripción:    Diseño del html llamado "index.html"
 */
 /*==============================Colores=======================*/
@@ -21,9 +21,17 @@
 }
 /* ============================== GENERAL ============================== */
 body{
+    /*
     background-color: var(--fondo);
     width: 100%;
-    height: 100%;
+    height: 100%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #87CEEB;
+    overflow: hidden;
+
 }
 
 h1, p{
@@ -35,13 +43,117 @@ h1, p{
     font-size: 3vw;
     margin: 0px;*/
 }
+/* ========================Animation====================
+/* Sun styling */
+.sun {
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #FFD700, #FFA500);
+    border-radius: 50%;
+    box-shadow: 0 0 100px rgba(255, 223, 0, 0.8);
+    animation: moveSun 20s linear infinite;
+}
+
+/* Cloud styling */
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 100px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+    animation: moveClouds 25s linear infinite;
+}
+
+/* Specific sizes and starting positions for clouds */
+.cloud1 {
+    width: 200px;
+    height: 100px;
+    top: 20%;
+    left: -20%;
+}
+
+.cloud2 {
+    width: 150px;
+    height: 75px;
+    top: 50%;
+    left: -30%;
+}
+
+.cloud3 {
+    width: 250px;
+    height: 120px;
+    top: 80%;
+    left: -25%;
+}
+
+/* Particle (aerosol) styling */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.25) 3px, transparent 3px);
+    background-size: 7px 7px;
+    opacity: 0.5;
+    animation: aerosolEffect 10s linear infinite;
+    pointer-events: none;
+}
+/* Sun movement animation */
+@keyframes moveSun {
+    0% {
+        left: -10%;
+        top: 10%;
+    }
+    50% {
+        left: 50%;
+        top: 30%;
+    }
+    100% {
+        left: 110%;
+        top: 10%;
+    }
+}
+
+/* Cloud movement animation */
+@keyframes moveClouds {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+/* Sky color change animation (day to sunset and back) */
+@keyframes skyAnimation {
+    0% {
+        background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    }
+    100% {
+        background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    }
+}
+
+/* Aerosol particle floating effect */
+@keyframes aerosolEffect {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
 
 /* ============================ CLASES ==============================*/
 .diseñoFranjas{
     position: absolute;
     /* background-color: var(--pink); */
     width: 100%;
-    height: 40px;
+    height: 10%;
 }
 .claseBotonMenu{
     position: relative;
@@ -52,7 +164,6 @@ h1, p{
     border-radius: 35px;
     text-align: center;    
     transition: background-color .4s;
-    text-align: center;
 }
 .claseBotonMenu:hover{
     background-color: var(--pink);
@@ -78,6 +189,7 @@ h1, p{
     font-size: 1.5vw;
 }
 
+
 /* ========================== ID ===================================*/
 
 #titulo{
@@ -86,12 +198,13 @@ h1, p{
     font-size: 50px;
     margin: 0px;
     text-align: center;
-    left: 40%;
+    
 }
 #franja1{
     position: absolute;
     top: 0%;
     left: 0%;
+    margin: 0%;
     background-color: var(--pink);
 }
 #franja2{
@@ -104,10 +217,13 @@ h1, p{
     position: absolute;
     background-color: var(--orange);
     width: 100%;
-    height: 60px;
+    height: 8%;
     top: 5%;
     left: 0;
     text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
 
@@ -213,202 +329,3 @@ h1, p{
     border-radius: 50%;
     cursor: pointer;
 }
-/*=====================================Animación=====================================*/
-#foco{
-    top:270px;
-    position: absolute;
-    left: 850px;
-    /**/
-    width: 250px;
-    height: 250px;
-  
-    border-radius: 50%;
-    animation: encender 5s linear infinite;
-}
-#cuello{
-    top:490px;
-    position: absolute;
-    left: 910px;
-    width: 140px;
-    height: 50px;
-    animation: encender 5s linear infinite;
-    
-}
-#linea1{
-    position: absolute;
-    top:430px;
-    left: 950px;
-    width: 6px;
-    height: 120px;
-    background-color: BLACK;
-    
-}
-#linea2{
-    position: absolute;
-    top:430px;
-    left: 1000px;
-    width: 6px;
-    height: 120px;
-    background-color: BLACK;
-    
-}
-#ovalo{
-    position: absolute;
-    top:410px;
-    left: 996px;
-    width: 30px;
-    height: 20px;
-    border-radius: 50%;
-    border: 5px solid rgb(0, 0, 0);
-    transform: rotate(120deg);
-    
-}
-#ovalo2{
-    position: absolute;
-    top:410px;
-    left: 919px;
-    width: 30px;
-    height: 20px;
-    border-radius: 50%;
-    border: 5px solid rgb(0, 0, 0);
-    transform: rotate(230deg);
-    
-}
-#linea3{
-    position: absolute;
-    top:428px;
-    left: 950px;
-    width: 50px;
-    height: 5px;
-    background-color: BLACK;
-}
-#base{
-    top:535px;
-    position: absolute;
-    left: 910px;
-    width: 138px;
-    height: 50px;
-    background-color: #3a3a3a;
-    border-radius: 10%;
-    border: solid 0.5px black;
-    
-}
-
-#rayo1{
-    top:400px;
-    position: absolute;
-    left: 692px;
-    width: 130px;
-    height: 20px;
-    border-radius: 40%;
-    transform: rotate(5deg);
-    
-    animation: encender 5s linear infinite;
-}
-#rayo2{
-    top:300px;
-    position: absolute;
-    left: 703px;
-    width: 130px;
-    height: 20px;
-    border-radius: 40%;
-    transform: rotate(20deg);
-    
-    animation: encender 5s linear infinite;
-}
-#rayo3{
-    top:215px;
-    position: absolute;
-    left: 760px;
-    width: 130px;
-    height: 20px;
-    border-radius: 40%;
-    transform: rotate(45deg);
-    
-    animation: encender 5s linear infinite;
-}
-#rayo4{
-    top:167px;
-    position: absolute;
-    left: 855px;
-    width: 130px;
-    height: 20px;
-    border-radius: 40%;
-    transform: rotate(80deg);
-    
-    animation: encender 5s linear infinite;
-}
-#rayo5{
-    top:165px;
-    position: absolute;
-    left: 960px;
-    width: 130px;
-    height: 20px;
-    border-radius: 40%;
-    transform: rotate(100deg);
-    
-    animation: encender 5s linear infinite;
-}
-#rayo6{
-    top:210px;
-    position: absolute;
-    left: 1055px;
-    width: 130px;
-    height: 20px;
-    border-radius: 40%;
-    transform: rotate(125deg);
-    
-    animation: encender 5s linear infinite;
-}
-#rayo7{
-    top:300px;
-    position: absolute;
-    left: 1125px;
-    width: 130px;
-    height: 20px;
-    border-radius: 40%;
-    transform: rotate(160deg);
-    
-    animation: encender 5s linear infinite;
-}
-#rayo8{
-    top:400px;
-    position: absolute;
-    left: 1125px;
-    width: 130px;
-    height: 20px;
-    border-radius: 40%;
-    transform: rotate(175deg);
-    
-    animation: encender 5s linear infinite;
-}
-@keyframes encender{
-    0%{
-        background-color:var(--fondo);
-       
-    }
-    1%{
-        background-color: rgb(255, 230, 0);
-
-      }
-    33%{
-        background-color: var(--fondo);
-       
-    }
-    34%{
-      background-color: rgb(255, 230, 0);
-     
-    }
-    66%{
-        background-color: var(--fondo);
-      
-      }
-    67%{
-      background-color: rgb(255, 230, 0);
-     
-    }
-    99%{
-        background-color:var(--fondo);
-        
-      }
-  }
