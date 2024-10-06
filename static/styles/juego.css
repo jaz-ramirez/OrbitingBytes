@@ -79,7 +79,7 @@ body{
 .classDivTarjeta{    
     font-family: Galindo_normal;
     text-align: center;
-    font-size: 0.8vw;
+    font-size: 85%;
     align-items: center;
 }
 .classAciertoFallo{
@@ -162,7 +162,7 @@ body{
 }
 #tarjetaPregunta{
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: 35%;
     width: 400px;
     height: 500px;

@@ -108,12 +108,10 @@ window.addEventListener("load", ()=>{
             for (let i = 0; i < 4 ;i++) {
                 document.cookie = "color"+(i+1)+"="+colores[i];
             }
-               
-            
+            colores = [];
             window.location.assign("./templates/juego.html");
 
         }else{
-            console.log({colores: colores, colorSet: colorSet});
             alert("Don't choose the same color for different players 🤓")
             colores = [];
         }
