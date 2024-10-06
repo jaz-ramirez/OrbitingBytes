@@ -1,0 +1,276 @@
+/*
+** @Archivo:        juego.css
+** @Equipo: 	    CoyoAtlón
+** @Descripción:    Diseño del html llamado "juego.html"
+*/
+:root{
+    --pink: #FFBEFF;
+    --green: #70F15B; 
+    --blue: #48C8FF;
+    --orange: #FFBC3A;
+    --fondo: #FEFFD9;
+}
+@font-face{
+    font-family: Galindo_normal;
+    src: url("../fonts/Galindo/Galindo-Regular.ttf");
+}
+body{
+    background-color: var(--fondo);
+    /*width: 100%;
+    height: 100%;*/
+}
+/*==========================Formato Diseño================================*/
+    h1{
+        position: relative;
+        font-family: Galindo_normal;
+        text-align: center;
+        font-size: 5vh;
+        top: -25%;
+    }
+    #fondoTitulo{
+        position: absolute;
+        background-color: var(--pink);
+        width: 100%;
+        height: 7.5%;
+        top: 0%;
+        left: 0;
+        text-align: center;
+    }
+    #espacio{
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        background-color: #1897ff;
+    }
+
+/* =====================================CLASES =============================================== */
+.tarjetasJugador{
+    position:absolute;
+    width: 280px;
+    
+    border-radius: 30px;
+    display: none;
+    text-align: center;
+    font-family: Galindo_normal;
+    font-size: 1vw;
+}
+.textoTarjetas{
+    font-family: Galindo_normal;
+    font-size: 1.5vw;
+}
+.respuestasTarjetasClass{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 17%;
+    /* background-color: rgb(226, 31, 31); */
+}
+/* FFE6B6 */
+.respuestasTarjetasClass:hover{
+    background-color: #f8cd7e;
+    cursor: pointer;
+
+}
+.respuestasTarjetasClass:active{
+    transition: background-color .2s;
+    background-color: #f5af2e;
+}
+
+.classDivTarjeta{    
+    font-family: Galindo_normal;
+    text-align: center;
+    font-size: 0.8vw;
+    align-items: center;
+}
+.classAciertoFallo{
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    width: 300px;
+    height: 70px;
+    /* background-color: rgb(173, 38, 38); */
+    color: #ffffff;    
+    text-align: center;
+    font-family: Galindo_normal;
+    font-size: 5vh;
+    display: none;
+}
+
+
+
+/*============================= ID ==================================*/
+#juego{
+    height: 800px;
+}
+#botonDado{
+    position: absolute;
+    background-color: var(--blue);
+    width: 150px;
+    top: 210px;
+    left: 100px;
+    border-radius: 15px;
+}
+#txtBotonDado{
+    top: 0px;
+    margin: 0px;
+    font-family: Galindo_normal;
+    font-size: 2vw;
+    text-align: center;
+}
+#bloqueBoton{
+    position: absolute;
+    width: 155px;
+    height: 50px;
+    top: 175px;
+    left: 95px;
+    border-radius: 15px;
+    display: none;
+}
+#comienzo{
+    position: absolute;
+    width: 130px;
+    top: 95px;
+    left: 1160px;
+    border-radius: 15px;
+    background-color: var(--green);
+    text-align: center;
+    font-family: Galindo_normal;
+    font-size: 3vh;
+
+    visibility:hidden;
+}
+
+
+#comienzo:hover{
+    background-color: #00b41e;
+    cursor: pointer;
+}
+#botonDado:hover{
+    background-color: #1897ff;
+    cursor: pointer;
+}
+                            /*======================ELEMENTOS DE TARJETAS DE PREGUNTAS===========================*/
+#fondoTarjetas{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+    display: none; 
+}
+#tarjetaPregunta{
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    width: 400px;
+    height: 500px;
+    background-color: var(--fondo);
+    border-style: solid;
+    border-width: 15px;
+    border-color: var(--green);
+    display: none;
+
+}
+#numKilometros{
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Galindo_normal;
+    font-size: 1vw;
+    display: flex;
+}
+#divMateria{
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 10%;
+    border-style: solid;
+    border-width: 1px;
+}
+#divPregunta{
+    position: absolute;
+    top: 12%;
+    width: 100%;
+    height: 15%;
+    border-style: solid;
+    border-width: 1px;
+}
+#idRespuesta1{
+    top: 30%;
+     border-style: solid;
+    border-width: 1px;
+}
+#idRespuesta2{
+    top: 47%;
+     border-style: solid;
+    border-width: 1px;
+}
+#idRespuesta3{
+    top: 64%;
+     border-style: solid;
+    border-width: 1px;
+}#idRespuesta4{
+    top: 81%;
+     border-style: solid;
+    border-width: 1px;
+}
+#bloqueRes1{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#turnoJugadorCasilla{
+    position: absolute;
+    text-align: center;
+    top: 8%;
+    right: 10%;
+    width: 230px;
+    height: 50px;
+    font-family: Galindo_normal;
+    font-size: 1.5vw;
+    display: none;
+}
+#turnoJugadorPregunta{
+    position: absolute;
+    text-align: center;
+    color: white;
+    width: 250px;
+    height: 50px;
+    top: 10%;
+    left: 10%;
+    font-family: Galindo_normal;
+    font-size: 1.5vw;
+    display: none;
+}
+
+/* =======================================TARJETAS JUGADOR=========================================== */
+#jug1{
+    top: 300px;
+    background-color: aqua;
+    left: 1%;
+}
+#jug2{
+    top: 480px;
+    background-color: aqua;
+    left: 1%;
+}
+#jug3{
+    top: 300px;
+    background-color: aqua;
+    left: 79%;
+}
+#jug4{
+    top: 480px;
+    background-color: aqua;
+    left: 79%;
+}
+
+
+
+
