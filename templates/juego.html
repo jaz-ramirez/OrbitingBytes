@@ -1,6 +1,6 @@
 <!--
 ** @Archivo:        juego.html
-** @Equipo: 	    CoyoAtlón
+** @Equipo: 	    Orbiting Bytes
 ** @Descripción:    Maquetado del juego
 -->
 <!DOCTYPE html>
@@ -9,38 +9,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juegos</title>
+    <title>Maraton Game</title>
     <link rel="icon" href="../static/img/maraton.png" type="img/png">
     <link rel="stylesheet" href="../static/styles/juego.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     
 </head>
 <body>
-    <div id="fondoTitulo" class=""><h1 id="titulo">Maratón</h1></div id="espacio"><div>hola</div>
+    <div id="fondoTitulo" class=""><h1 id="titulo">Maratón OrbitingBytes Game</h1></div id="espacio"><div>hola</div>
 
     <div><canvas id='juego' width="1500" height="750"></canvas></div>
     
     
     <!--<script src="../dynamics/js/animacion_dado.js"></script>-->
     <!-- <img id="idTablero" src="../static/img/tablero42.png" alt="tablero"> -->
-    <div id="botonDado"><p id="txtBotonDado">Girar</p></div>
+    <div id="botonDado"><p id="txtBotonDado">Roll the dice</p></div>
     <div id="bloqueBoton"></div>
     <!-- Divs para tarjeta de cada jugador -->
     <div id="jug1" class="tarjetasJugador"><p id="textJug1" class="textoTarjeta"></p></div>
     <div id="jug2" class="tarjetasJugador"><p id="textJug2" class="textoTarjeta"></p></div>
     <div id="jug3" class="tarjetasJugador"><p id="textJug3" class="textoTarjeta"></p></div>
     <div id="jug4" class="tarjetasJugador"><p id="textJug4" class="textoTarjeta"></p></div>
-    <div id="turnoJugadorCasilla">Turno: Jugador X</div>
+    <div id="turnoJugadorCasilla">Turn: Player X</div>
 
 
-    <div id="comienzo">Iniciar Juego</div>
+    <div id="comienzo">Start game</div>
     <div id="bloqueComienzo"></div>
 
     <!-- Elementos para tarjeta de preguntas -->
     <div id="fondoTarjetas" ></div>
-    <div id="divAcierto" class="classAciertoFallo">¡Has acertado!</div>
-    <div id="divFallo" class="classAciertoFallo">¡Has fallado!</div>
-    <div id="turnoJugadorPregunta">Turno del jugador X</div>
+    <div id="divAcierto" class="classAciertoFallo">You got it right!</div>
+    <div id="divFallo" class="classAciertoFallo">You have failed!</div>
+    <div id="turnoJugadorPregunta">Turn: Player X</div>
     <div id="tarjetaPregunta">        
         <div id="numKilometros" class="classDivTarjeta"></div>
         <div id="divMateria" class="classDivTarjeta"></div>

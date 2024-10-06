@@ -1,6 +1,6 @@
 /**  
 ** @Archivo:        juego.js
-** @Equipo: 	    CoyoAtlón
+** @Equipo: 	    Orbiting Bytes 
 ** @Descripción:    Funcionamiento del juego y animaciones
 */
 window.onload = function() {
@@ -300,7 +300,7 @@ window.onload = function() {
                                 turnoJuego=orden[0];
                             }
                             divTurnoJugadorTarjeta.style.display = 'none';
-                            divTurnoJugadorNormal.innerHTML='Turno: Jugador '+turnoJuego;
+                            divTurnoJugadorNormal.innerHTML='Turn: Player '+turnoJuego;
                             new Promise((resolve,reject) =>{
                                 dibujarTablero();
                                 resolve();
@@ -395,7 +395,7 @@ window.onload = function() {
         fondoPreguntaTarjeta.style.display = 'block';
         tarjetaPreguntaTarjeta.style.display = 'block';
         divTurnoJugadorTarjeta.style.display = 'block';
-        divTurnoJugadorTarjeta.innerHTML= 'Turno del jugador: '+turnoJuego;
+        divTurnoJugadorTarjeta.innerHTML= 'Turn: Player'+turnoJuego;
         numKilometroTarjeta.innerHTML= 'Km: '+fetchKilometro;
         if(rand==1){
             materiaTarjeta.innerHTML= 'Aerosols';
@@ -651,7 +651,7 @@ window.onload = function() {
         function ordenanza(){
             if(valorPrimerTiro.length<numJugadores)
             {
-                Swal.fire("Siguiente jugador, es tu turno de tirar el dado");
+                Swal.fire("Next player, it's your turn to roll the dice");
                 dadoButton.style.visibility = 'visible';
             }
             else if(valorPrimerTiro.length==numJugadores&&varcontrol===0)
@@ -660,26 +660,26 @@ window.onload = function() {
     
                 varcontrol++;
                 if(numJugadores==1){
-                    Swal.fire('Eres el único jugador, ¡Mucha suerte, que la ignorancia no gane!');
+                    Swal.fire('You are the only player, good luck, may ignorance not win!');
                 }
                 else if(numJugadores==2){
-                    Swal.fire("El orden de jugadores es :\nJugador "+orden[0]+"\nJugador "+orden[1]+
-                        "\n¡Mucha suerte, que la ignorancia no gane!");
+                    Swal.fire("The order of players is :\nPlayer "+orden[0]+"\nPlayer "+orden[1]+
+                        "\nBest of luck, may ignorance not win!");
                 }
                 else if(numJugadores==3){
-                     Swal.fire("El orden de jugadores es :\nJugador "+orden[0]+"\nJugador "+orden[1]
-                    +"\nJugador "+orden[2]+"\n¡Mucha suerte, que la ignorancia no gane!");
+                     Swal.fire("The order of players is :\nPlayer "+orden[0]+"\nPlayer "+orden[1]
+                    +"\nPlayer "+orden[2]+"\nBest of luck, may ignorance not win!");
                     
                 }else if(numJugadores==4){
-                    Swal.fire("El orden de jugadores es :\nJugador "+orden[0]+"\nJugador "+orden[1]
-                    +"\nJugador "+orden[2]+"\nJugador "+orden[3]+"\n¡Mucha suerte, que la ignorancia no gane!");
+                    Swal.fire("The order of players is :\nPlayer "+orden[0]+"\nPlayer "+orden[1]
+                    +"\nPlayer "+orden[2]+"\nPlayer "+orden[3]+"\nBest of luck, may ignorance not win!");
                 }
                 
                 dadoButton.style.visibility = 'visible';
                 boolPregunta=true;
                 turnoJuego = orden[0];
                 divTurnoJugadorNormal.style.display = 'block';
-                divTurnoJugadorNormal.innerHTML='Turno: Jugador '+turnoJuego;
+                divTurnoJugadorNormal.innerHTML='Turn: Player '+turnoJuego;
             }                  
         }
 
@@ -806,19 +806,19 @@ window.onload = function() {
         let txtTarj4 = document.getElementById("jug4");
 
         if(jugadores==1){
-            txtTarj1.innerHTML='Jugador 1 <br>KM recorridos:'+kmRecorridosJug1+'<br>Aciertos:'+aciertosJug1+'<br>Fallidos:'+fallidosJug1;
+            txtTarj1.innerHTML='Player 1 <br>KM traveled:'+kmRecorridosJug1+'<br>Successes:'+aciertosJug1+'<br>Failed:'+fallidosJug1;
         }else if(jugadores==2){
-            txtTarj1.innerHTML='Jugador 1 <br>KM recorridos:'+kmRecorridosJug1+'<br>Aciertos:'+aciertosJug1+'<br>Fallidos:'+fallidosJug1;
-            txtTarj2.innerHTML='Jugador 2 <br>KM recorridos:'+kmRecorridosJug2+'<br>Aciertos:'+aciertosJug2+'<br>Fallidos:'+fallidosJug2;    
+            txtTarj1.innerHTML='Player 1 <br>KM traveled:'+kmRecorridosJug1+'<br>Successes:'+aciertosJug1+'<br>Failed:'+fallidosJug1;
+            txtTarj2.innerHTML='Player 2 <br>KM traveled:'+kmRecorridosJug2+'<br>Successes:'+aciertosJug2+'<br>Failed:'+fallidosJug2;    
         }else if(jugadores==3){
-            txtTarj1.innerHTML='Jugador 1 <br>KM recorridos:'+kmRecorridosJug1+'<br>Aciertos:'+aciertosJug1+'<br>Fallidos:'+fallidosJug1;
-            txtTarj2.innerHTML='Jugador 2 <br>KM recorridos:'+kmRecorridosJug2+'<br>Aciertos:'+aciertosJug2+'<br>Fallidos:'+fallidosJug2; 
-            txtTarj3.innerHTML='Jugador 3 <br>KM recorridos:'+kmRecorridosJug3+'<br>Aciertos:'+aciertosJug3+'<br>Fallidos:'+fallidosJug3;
+            txtTarj1.innerHTML='Player 1 <br>KM traveled:'+kmRecorridosJug1+'<br>Successes:'+aciertosJug1+'<br>Failed:'+fallidosJug1;
+            txtTarj2.innerHTML='Player 2 <br>KM traveled:'+kmRecorridosJug2+'<br>Successes:'+aciertosJug2+'<br>Failed:'+fallidosJug2; 
+            txtTarj3.innerHTML='Player 3 <br>KM traveled:'+kmRecorridosJug3+'<br>Successes:'+aciertosJug3+'<br>Failed:'+fallidosJug3;
         }else if(jugadores==4){
-            txtTarj1.innerHTML='Jugador 1 <br>KM recorridos:'+kmRecorridosJug1+'<br>Aciertos:'+aciertosJug1+'<br>Fallidos:'+fallidosJug1;
-            txtTarj2.innerHTML='Jugador 2 <br>KM recorridos:'+kmRecorridosJug2+'<br>Aciertos:'+aciertosJug2+'<br>Fallidos:'+fallidosJug2; 
-            txtTarj3.innerHTML='Jugador 3 <br>KM recorridos:'+kmRecorridosJug3+'<br>Aciertos:'+aciertosJug3+'<br>Fallidos:'+fallidosJug3;
-            txtTarj4.innerHTML='Jugador 4 <br>KM recorridos:'+kmRecorridosJug4+'<br>Aciertos:'+aciertosJug4+'<br>Fallidos:'+fallidosJug4;
+            txtTarj1.innerHTML='Player 1 <br>KM traveled:'+kmRecorridosJug1+'<br>Successes:'+aciertosJug1+'<br>Failed:'+fallidosJug1;
+            txtTarj2.innerHTML='Player 2 <br>KM traveled:'+kmRecorridosJug2+'<br>Successes:'+aciertosJug2+'<br>Failed:'+fallidosJug2; 
+            txtTarj3.innerHTML='Player 3 <br>KM traveled:'+kmRecorridosJug3+'<br>Successes:'+aciertosJug3+'<br>Failed:'+fallidosJug3;
+            txtTarj4.innerHTML='Player 4 <br>KM traveled:'+kmRecorridosJug4+'<br>Successes:'+aciertosJug4+'<br>Failed:'+fallidosJug4;
         }
     }
 
@@ -862,7 +862,7 @@ window.onload = function() {
         inicializarFichas();
         new Promise(function(resolve, reject){
             dibujarTablero();
-            Swal.fire('Gira el dado para iniciar el juego');
+            Swal.fire('Roll the dice to start the game');
             resolve();
         }).then(()=>{
             return new Promise((resolve)=>{
