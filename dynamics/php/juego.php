@@ -87,5 +87,5 @@
 
     /*Nos sirve en js: Kilometros, pregunta respuesta y boolcorrect */
 
-    print_r($pregunta1['question'].';'. $pregunta1['answer'].'#'.$pregunta1['isCorrect'].'&'. $pregunta2['answer'] . '#' . $pregunta2['isCorrect'].'&'. $pregunta3['answer'] . '#' . $pregunta3['isCorrect'].'&'. $pregunta4['answer'] . '#' . $pregunta4['isCorrect'].'|'.$pregunta1['kilometer'].'°'.$idSeleccionado);
+    print_r($pregunta1['question'].';'. $pregunta1['answer'].'#'.$pregunta1['isCorrect'].'&'. $pregunta2['answer'] . '#' . $pregunta2['isCorrect'].'&'. $pregunta3['answer'] . '#' . $pregunta3['isCorrect'].'&'. $pregunta4['answer'] . '#' . $pregunta4['isCorrect'].'|'.$pregunta1['kilometer'].'^'.$idSeleccionado);
 ?>

@@ -455,7 +455,7 @@ window.onload = function() {
             stringPetición = text;
             console.log(stringPetición);
             //metodo split que nos separa el string de la petición y los almacena en sus respectivas varibles en forma de arrelgos donde cada una contiene la respuesta y el boolCorrect
-            fetchIDPregunta = stringPetición.split('°');
+            fetchIDPregunta = stringPetición.split('^');
             fetchPregunta = fetchIDPregunta[0].split(";");
             fetchIDPregunta=fetchIDPregunta[1];
             preguntas_pasadas.push(fetchIDPregunta);
