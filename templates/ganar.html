@@ -1,6 +1,6 @@
 <!--
 ** @Archivo:        ganar.html
-** @Equipo: 	    Orbiting Bytes
+** @Equipo:     Orbiting Bytes
 ** @Descripción:    Maquetado de la pantalla de ganar
 -->
 <!DOCTYPE html>
@@ -15,30 +15,31 @@
     <link rel="stylesheet" href="../static/styles/ganar.css">
 </head>
 <body>
-    <div id="fondoTitulo" class=""><h1 id="titulo">Maratón</h1></div>
-    <section>
-        <div id="Seccion1">
-            <div id="ganaste"><h1>¡FELICIDADES GANASTE!</h1></div>
+    <div class="sky">
+        <div class="sun"></div>
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="particles"></div>
+    </div>
+
+    <div id="fondoTitulo" class=""><h1 id="titulo">Maratón Orbiting Bytes Game</h1></div>
     
-        <div id="idMedalla"> <img src="../static/img/medalla.png" alt="medalla" width="400"></div>
-        <div id="jugador">Jugador 1</div>
-        <script>
-            let cookies = document.cookie;
-            cookies = cookies.split('; ');
-            let ganador = cookies[0].split('=')[1];
-            let jugador = document.getElementById("jugador");
-            jugador.innerHTML = 'Jugador '+ganador;
-        </script>
+  
+    <div id="ganaste"><h1>CONGRATULATIONS YOU WON!</h1></div>
+    
 
-        <div id="Seccion2">
-            <div><h2>¡Demostraste muchos<br> conocimientos!</h2></div>
-            <div id="cerebro"> <img src="../static/img/cerebro.png" alt="medalla" width="300px"></div>
-            
-        </div>
-        <div><h2>¡Sigue aprendiendo!</h2></div>
-        <div id="learn"> <img src="../static/img/learn.png" alt="learn" width="300px"></div><br>
-        <br><div ><a id="Regresar" href="../index.html">Regresar a la página de inicio</a></div>
+    <div id="jugador">Gamer</div>
+    <script>
+        let cookies = document.cookie;
+        cookies = cookies.split('; ');
+        let ganador = cookies[0].split('=')[1];
+        let jugador = document.getElementById("jugador");
+        jugador.innerHTML = 'Player '+ganador;
+    </script>
+    
+    <div id="learn"><a class="styled-button" href="https://www.globe.gov/web/atmosphere">LEARN MORE!</a></div>
+    <br><div id="regresar"  ><a class="styled-button" href="../index.html">Go Home</a></div>
 
-    </section>
 </body>
 </html>

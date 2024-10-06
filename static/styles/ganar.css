@@ -20,11 +20,125 @@
     font-family: Galindo_normal;
     src: url("../fonts/Galindo/Galindo-Regular.ttf");
 }
-body{
-    background-color: var(--fondo);
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #87CEEB;
+    overflow: hidden;
+    /* Permite la posición absoluta de elementos hijos */
 }
 h1{
     font-size: 70px;
+}
+/*======================Animation===================
+/* Cielo */
+
+/* Sun styling */
+.sun {
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #FFD700, #FFA500);
+    border-radius: 50%;
+    box-shadow: 0 0 100px rgba(255, 223, 0, 0.8);
+    animation: moveSun 20s linear infinite;
+}
+
+/* Cloud styling */
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 100px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+    animation: moveClouds 25s linear infinite;
+}
+
+/* Specific sizes and starting positions for clouds */
+.cloud1 {
+    width: 200px;
+    height: 100px;
+    top: 20%;
+    left: -20%;
+}
+
+.cloud2 {
+    width: 150px;
+    height: 75px;
+    top: 50%;
+    left: -30%;
+}
+
+.cloud3 {
+    width: 250px;
+    height: 120px;
+    top: 80%;
+    left: -25%;
+}
+
+/* Particle (aerosol) styling */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.25) 3px, transparent 3px);
+    background-size: 7px 7px;
+    opacity: 0.5;
+    animation: aerosolEffect 10s linear infinite;
+    pointer-events: none;
+}
+/* Sun movement animation */
+@keyframes moveSun {
+    0% {
+        left: -10%;
+        top: 10%;
+    }
+    50% {
+        left: 50%;
+        top: 30%;
+    }
+    100% {
+        left: 110%;
+        top: 10%;
+    }
+}
+
+/* Cloud movement animation */
+@keyframes moveClouds {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+/* Sky color change animation (day to sunset and back) */
+@keyframes skyAnimation {
+    0% {
+        background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    }
+    100% {
+        background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    }
+}
+
+/* Aerosol particle floating effect */
+@keyframes aerosolEffect {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
 }
 
 /*========================ID========================*/
@@ -36,6 +150,9 @@ h1{
     top: 0%;
     left: 0;
     text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
 }
 #titulo{
     font-family: Galindo_normal;
@@ -44,37 +161,50 @@ h1{
     font-size: 50px;
     margin: 0px;
     text-align: center;
-    left: 44%;
+    text-align: center;
 }
 #ganaste{
-    display: inline;
-    color: green;
-    padding: 0px;
+    position: absolute;
+    top: 25%;
+    color: black;
+    text-shadow: 5px 5px 0 var(--pink), 10px 10px 0 var(--pink);
 }
-#Seccion1{
-    font-family: anymice;
-    display: flex;
-    flex-direction: column;
-    top: 80px;
-    margin: 80px;
-    border:40px;
-    align-items: center;
-    font-size: 50px;
+
+
+.styled-button {
+    background: var(--blue); /* Degradado de colores */
+    border: none; /* Sin borde */
+    color: black; /* Texto blanco */
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+    transition: all 0.3s ease; /* Transición suave para efectos */
 }
-#Seccion2{
-    font-family: anymice;
-    display: flex;
-    flex-direction: row;
-    font-size: 30px;
-    align-items: center;
-    text-align:center;
-    width: 100%;
-    right: 30%;
-    justify-content: center;
-    justify-items: center;
+
+/* Efecto hover (cuando el ratón pasa sobre el botón) */
+.styled-button:hover {
+    background: var(--pink); /* Inversión de colores del degradado */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    transform: translateY(-5px); /* Eleva el botón */
 }
-#Regresar{
-    font-size: 30px;
+#jugador{
+    position: absolute;
+    top:50%;
+    font-size: 48px;
+}
+#regresar{
+    position: absolute;
+    top:85%;
+    font-size: 25px;
+    
+}
+#learn{
+    position: absolute;
+    top:67%;
+    font-size: 40px;
 }
 
 

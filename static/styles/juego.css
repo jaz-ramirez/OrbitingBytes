@@ -6,9 +6,9 @@
 :root{
     --pink: #FFBEFF;
     --green: #70F15B; 
-    --blue: #48C8FF;
+    --blue: #FFBC3A;
     --orange: #FFBC3A;
-    --fondo: #FEFFD9;
+    --fondo: #87CEEB;
 }
 @font-face{
     font-family: Galindo_normal;
@@ -146,7 +146,7 @@ body{
     cursor: pointer;
 }
 #botonDado:hover{
-    background-color: #1897ff;
+    background-color: var(--pink);
     cursor: pointer;
 }
                             /*======================ELEMENTOS DE TARJETAS DE PREGUNTAS===========================*/

@@ -19,59 +19,10 @@
     font-family: anymice;
     src: url("../fonts/any.ttf");
 }
-body{
-    background-color: var(--fondo);
-}
 
-#fondoTitulo{
-    position: absolute;
-    background-color: var(--pink);
-    width: 100%;
-    height: 60px;
-    top: 0%;
-    left: 0;
-    text-align: center;
-}
-#titulo{
-    font-family: Galindo_normal;
-    position: absolute;
-    top: 7%;
-    font-size: 50px;
-    margin: 0px;
-    text-align: center;
-    left: 44%;
-}
-#Seccion1{
-    font-family: anymice;
-    display: flex;
-    flex-direction: column;
-    top: 80px;
-    margin: 80px;
-    border:40px;
-    align-items: center;
-    font-size: 40px;
-}
-#Seccion2{
-    font-family: anymice;
-    display: flex;
-    flex-direction: row;
-    font-size: 25px;
-    align-items: center;
-    text-align:center;
-    width: 100%;
-    right: 30%;
-    justify-content: center;
-    justify-items: center;
-}
-#perdiste{
-    color: rgb(192, 0, 0);
-}
-#Regresar{
-    font-size: 30px;
-}
+/*===============================   Animation=======================
 
-/*===========================Animation===================
-/* Global settings */
+/* Estilo global */
 * {
     margin: 0;
     padding: 0;
@@ -87,115 +38,209 @@ body {
     position: relative; /* Permite la posición absoluta de elementos hijos */
 }
 
-/* Sky container as background */
+/* Cielo */
 .sky {
-    position: absolute; /* Coloca el cielo en posición absoluta */
+    position: absolute; /* Cielo en posición absoluta */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, #7d7d7d, #3c3c3c); /* Cielo gris oscuro */
-    z-index: 1; /* Asegúrate de que esté detrás del contenido */
-    animation: skyAnimation 30s linear infinite; /* Animación para dar un efecto de movimiento */
+    background: linear-gradient(to bottom, #87CEEB, #2C3E50); /* Cielo azul */
+    animation: skyAnimation 30s linear infinite; /* Animación de color del cielo */
 }
 
-/* Cloud styling */
+/* Sol */
+.sun {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #FFD700, #FFA500);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(255, 223, 0, 0.7);
+    animation: moveSun 20s linear infinite; /* Movimiento del sol */
+}
+
+/* Estilo de nubes */
 .cloud {
     position: absolute;
-    background: rgba(0, 0, 0, 0.7); /* Nubes oscuras */
-    border-radius: 100px;
-    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.5);
-    animation: moveClouds 25s linear infinite;
+    background: rgba(255, 255, 255, 0.8); /* Nubes blancas */
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Specific sizes and starting positions for clouds */
+/* Nubes con posiciones y tamaños diferentes */
 .cloud1 {
     width: 200px;
     height: 100px;
     top: 20%;
-    left: -20%;
+    left: 10%;
+    animation: moveClouds 30s linear infinite; /* Movimiento de nubes */
 }
 
 .cloud2 {
     width: 150px;
     height: 75px;
     top: 50%;
-    left: -30%;
+    left: 60%;
+    animation: moveClouds 35s linear infinite; /* Movimiento de nubes */
 }
 
 .cloud3 {
     width: 250px;
     height: 120px;
     top: 80%;
-    left: -25%;
+    left: 30%;
+    animation: moveClouds 25s linear infinite; /* Movimiento de nubes */
 }
 
-/* Particle (aerosol) styling */
+/* Partículas (aerosoles) */
 .particles {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.3) 5px, transparent 5px); /* Tamaño de las partículas */
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.2) 5px, transparent 5px); /* Tamaño de las partículas */
     background-size: 10px 10px; /* Tamaño del fondo para las partículas */
-    opacity: 0.5; /* Opacidad para dar un efecto de contaminación */
-    animation: aerosolEffect 15s linear infinite;
+    opacity: 0.5; /* Opacidad para simular contaminación */
+    animation: aerosolEffect 10s linear infinite; /* Efecto de movimiento de las partículas */
     pointer-events: none; /* Evita que interfiera con otros elementos */
 }
 
-/* Content styling */
-.content {
-    position: relative; /* Permite que el contenido esté por encima del fondo */
-    z-index: 2; /* Asegúrate de que esté por encima de la animación */
-    color: white; /* Color del texto */
-    text-align: center; /* Centra el texto */
-    font-family: Arial, sans-serif; /* Tipografía */
-}
-
-/* Button styling */
-button {
-    background-color: #d9534f; /* Color del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    margin-top: 20px; /* Espaciado superior */
-    font-size: 16px; /* Tamaño de fuente */
-}
-
-/* Sky movement animation */
+/* Animación de cambio en el cielo */
 @keyframes skyAnimation {
     0% {
-        background: linear-gradient(to bottom, #7d7d7d, #3c3c3c);
-    }
-    50% {
-        background: linear-gradient(to bottom, #4c4c4c, #2c2c2c); /* Oscurecimiento del cielo */
+        background: linear-gradient(to bottom, #87CEEB, #2C3E50);
     }
     100% {
-        background: linear-gradient(to bottom, #7d7d7d, #3c3c3c);
+        background: linear-gradient(to bottom, #87CEEB, #2C3E50);
     }
 }
 
-/* Cloud movement animation */
+/* Movimiento del sol */
+@keyframes moveSun {
+    0% {
+        left: -10%;
+        top: 10%;
+    }
+    50% {
+        left: 40%;
+        top: 20%;
+    }
+    100% {
+        left: 110%;
+        top: 10%;
+    }
+}
+
+/* Movimiento de nubes */
 @keyframes moveClouds {
     0% {
         left: -30%;
     }
     100% {
-        left: 110%;
+        left: 110%; /* Movimiento de nubes de lado a lado */
     }
 }
 
-/* Aerosol particle floating effect */
+/* Efecto de movimiento de las partículas */
 @keyframes aerosolEffect {
     0% {
         background-position: 0 0;
     }
     100% {
-        background-position: 300px 300px; /* Movimiento de fondo */
+        background-position: 200px 200px; /* Movimiento de fondo */
     }
+}
+
+/*==================================Page=====================*/
+#fondoTitulo{
+    position: absolute;
+    background-color: #2b7ea2;
+    width: 100%;
+    height: 10%;
+    top: 0%;
+    left: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+}
+#titulo{
+    font-family: Galindo_normal;
+    position: absolute;
+    top: 7%;
+    font-size: 50px;
+    margin: 0px;
+}
+
+#Regresar{
+    font-size: 30px;
+}
+#lose{
+    position: absolute;
+    top:23%;
+    background-color: rgba(22, 22, 22, 0.9);
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+}
+#over{
+    padding: 15;
+    font-family:anymice;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+}
+#importance{
+    position: absolute;
+    background-color: rgba(22, 22, 22, 0.9);
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    width: 70%;
+}
+.text{
+    padding: 10px;
+    font-family:anymice;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+#learn{
+    position: absolute;
+    top:70%;
+    font-size: 25px;
+    color: black;
+}
+.styled-button {
+    background: var(--blue); /* Degradado de colores */
+    border: none; /* Sin borde */
+    color: black; /* Texto blanco */
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+    transition: all 0.3s ease; /* Transición suave para efectos */
+}
+
+/* Efecto hover (cuando el ratón pasa sobre el botón) */
+.styled-button:hover {
+    background: var(--pink); /* Inversión de colores del degradado */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    transform: translateY(-5px); /* Eleva el botón */
+}
+#regresar{
+    position: absolute;
+    top:80%;
+    font-size: 20px;
+    
 }
 
 
