@@ -26,12 +26,12 @@
     //funcion que busca preguntas en la base de datos
     function buscarPregunta($numMateria, $conexion, $idsPasadas){
         $ids = [];
-        $peticion = "SELECT id_pregunta FROM Preguntas WHERE id_materia=".$numMateria.";";
+        $peticion = "SELECT id_question FROM question WHERE id_protocol=".$numMateria.";";
         mysqli_real_escape_string($conexion, $peticion);
         $query = mysqli_query($conexion, $peticion);
         while($row = mysqli_fetch_array($query, MYSQLI_ASSOC))
         {
-            array_push($ids, $row["id_pregunta"]);
+            array_push($ids, $row["id_question"]);
         }
         $keyIdRand = rand(0,19);
         $idRand = $ids[$keyIdRand];
@@ -63,9 +63,9 @@
     $idSeleccionado = buscarPregunta($numMateria,$conexion,$preguntasPasadas);
 
 
-    $peticion = "SELECT id_pregunta, pregunta, respuesta, boolCorrect, kilómetro FROM Preguntas 
-                NATURAL JOIN Respuestas 
-                WHERE Preguntas.id_pregunta=".$idSeleccionado;
+    $peticion = "SELECT id_question, question, answer, isCorrect, kilometer FROM question 
+                NATURAL JOIN answer 
+                WHERE question.id_question=".$idSeleccionado;
     mysqli_real_escape_string($conexion, $peticion);
     $query = mysqli_query($conexion, $peticion);
     // $row_instrucciones = mysqli_fetch_array($query);
@@ -87,5 +87,5 @@
 
     /*Nos sirve en js: Kilometros, pregunta respuesta y boolcorrect */
 
-    print_r($pregunta1['pregunta'].';'. $pregunta1['respuesta'].'#'.$pregunta1['boolCorrect'].'&'. $pregunta2['respuesta'] . '#' . $pregunta2['boolCorrect'].'&'. $pregunta3['respuesta'] . '#' . $pregunta3['boolCorrect'].'&'. $pregunta4['respuesta'] . '#' . $pregunta4['boolCorrect'].'|'.$pregunta1['kilómetro'].'°'.$idSeleccionado);
+    print_r($pregunta1['question'].';'. $pregunta1['answer'].'#'.$pregunta1['isCorrect'].'&'. $pregunta2['answer'] . '#' . $pregunta2['isCorrect'].'&'. $pregunta3['answer'] . '#' . $pregunta3['isCorrect'].'&'. $pregunta4['answer'] . '#' . $pregunta4['isCorrect'].'|'.$pregunta1['kilometer'].'°'.$idSeleccionado);
 ?>

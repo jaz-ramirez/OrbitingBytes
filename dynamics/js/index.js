@@ -33,7 +33,7 @@ window.addEventListener("load", ()=>{
         divCaractJuego.style.visibility="visible";
     });
 
-     botonInstrucciones.addEventListener("click", ()=>{ 
+    botonInstrucciones.addEventListener("click", ()=>{ 
         window.location.assign("./templates/instrucciones.html");
     });
 
@@ -103,13 +103,20 @@ window.addEventListener("load", ()=>{
         }else if(p2R2.checked){
             document.cookie = "tablero=42";
         }
+        let colorSet = new Set(colores);
+        if(colorSet.size == colores.length){
+            for (let i = 0; i < 4 ;i++) {
+                document.cookie = "color"+(i+1)+"="+colores[i];
+            }
+               
+            
+            window.location.assign("./templates/juego.html");
 
-        for (let i = 0; i < 4 ;i++) {
-            document.cookie = "color"+(i+1)+"="+colores[i];
+        }else{
+            console.log({colores: colores, colorSet: colorSet});
+            alert("Don't choose the same color for different players 🤓")
+            colores = [];
         }
-           
-        
-        window.location.assign("./templates/juego.html");
 
     });
 

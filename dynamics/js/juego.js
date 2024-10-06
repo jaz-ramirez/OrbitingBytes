@@ -397,22 +397,22 @@ window.onload = function() {
         divTurnoJugadorTarjeta.innerHTML= 'Turno del jugador: '+turnoJuego;
         numKilometroTarjeta.innerHTML= 'Km: '+fetchKilometro;
         if(rand==1){
-            materiaTarjeta.innerHTML= 'Matemáticas';
+            materiaTarjeta.innerHTML= 'Aerosols';
             contadorMate++;
         }else if(rand==2){
-            materiaTarjeta.innerHTML= 'Física';
+            materiaTarjeta.innerHTML= 'Air Temperature';
             contadorFisica++;
         }else if(rand==3){
-            materiaTarjeta.innerHTML= 'Química';
+            materiaTarjeta.innerHTML= 'Barometric Pressure';
             contadorQuimica++;
         }else if(rand==4){
-            materiaTarjeta.innerHTML= 'Psicología';
+            materiaTarjeta.innerHTML= 'Clouds';
             contadorPsico++;
         }else if(rand==5){
-            materiaTarjeta.innerHTML= 'Literatura';
+            materiaTarjeta.innerHTML= 'Precipitation';
             contadorLite++;
         }else if(rand==6){
-            materiaTarjeta.innerHTML= 'Computación';
+            materiaTarjeta.innerHTML= 'Relative Humidity & Surface Temperature';
             contadorCom++;
         }
         preguntaTarjeta.innerHTML= fetchPregunta[0];
@@ -452,6 +452,7 @@ window.onload = function() {
             return response.text();
         }).then(function (text){
             stringPetición = text;
+            console.log(stringPetición);
             //metodo split que nos separa el string de la petición y los almacena en sus respectivas varibles en forma de arrelgos donde cada una contiene la respuesta y el boolCorrect
             fetchIDPregunta = stringPetición.split('°');
             fetchPregunta = fetchIDPregunta[0].split(";");
