@@ -274,7 +274,7 @@ window.onload = function() {
                         divTurnoJugadorTarjeta.style.display = 'none';
                         turnoPregunta=false;
                         if(res == 1){
-                            fichas[orden[contador]-1].avanzar(50);
+                            fichas[orden[contador]-1].avanzar(fetchKilometro);
                             if(orden[contador]==1){
                                 aciertosJug1++;
                                 kmRecorridosJug1 = fichas[0].casilla;
