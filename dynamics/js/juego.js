@@ -382,8 +382,8 @@ window.onload = function() {
                                 });
                             }             
                            
-                            divTurnoJugadorNormal.innerHTML='Turno: Jugador '+turnoJuego; 
-                            divTurnoJugadorTarjeta.innerHTML = 'Turno del jugador: '+turnoJugadorePregunta;
+                            divTurnoJugadorNormal.innerHTML='Turn: Player '+turnoJuego; 
+                            divTurnoJugadorTarjeta.innerHTML = 'Turn: Player '+turnoJugadorePregunta;
                             checarGanador();
                             repetirIds();
                         }
