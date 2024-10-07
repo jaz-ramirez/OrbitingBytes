@@ -1,5 +1,5 @@
 /*
-** @Archivo:        juego.css
+** @Archivo:        juego.csstxtBotonDaboton
 ** @Equipo: 	    Orbiting Bytes
 ** @Descripción:    Diseño del html llamado "juego.html"
 */
@@ -114,7 +114,7 @@ body{
     top: 0px;
     margin: 0px;
     font-family: Galindo_normal;
-    font-size: 2vw;
+    font-size: 1.7vw;
     text-align: center;
 }
 #bloqueBoton{

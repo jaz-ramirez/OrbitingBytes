@@ -1,1 +1,1 @@
-# OrbitingBytes
+# For more information read [User Guide](./User%20Guide.pdf)
